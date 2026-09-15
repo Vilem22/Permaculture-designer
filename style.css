@@ -559,7 +559,7 @@ p {
   color: var(--muted);
 }
 
-.inspiration-card-hedgelaying {
+.inspiration-card-with-gallery {
   padding-bottom: 34px;
 }
 
@@ -591,6 +591,7 @@ p {
   display: block;
   object-fit: cover;
   object-position: center center;
+  image-rendering: auto;
   transition: transform 0.3s ease;
 }
 
