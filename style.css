@@ -532,33 +532,22 @@ p {
 
 .inspiration-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
+  grid-template-columns: 1fr;
+  gap: 24px;
 }
 
 .inspiration-card {
-  min-height: 250px;
-  display: grid;
-  grid-template-columns: 52px 1fr;
-  gap: 22px;
-  padding: 34px;
+  display: block;
+  min-height: 0;
+  padding: 38px 40px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: white;
   box-shadow: 0 10px 32px rgba(14, 45, 36, 0.07);
 }
 
-.inspiration-number {
-  width: 44px;
-  height: 44px;
-  display: grid;
-  place-items: center;
-  border: 1px solid var(--line);
-  border-radius: 50%;
-  color: var(--forest-soft);
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.08em;
+.inspiration-card-copy {
+  max-width: 940px;
 }
 
 .inspiration-card h3 {
@@ -570,24 +559,15 @@ p {
   color: var(--muted);
 }
 
-.inspiration-card-wide {
-  grid-column: 1 / -1;
-  display: block;
-  padding: 34px;
-}
-
-.inspiration-card-header {
-  display: grid;
-  grid-template-columns: 52px 1fr;
-  gap: 22px;
-  align-items: start;
+.inspiration-card-hedgelaying {
+  padding-bottom: 34px;
 }
 
 .inspiration-gallery {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-  margin-top: 28px;
+  gap: 18px;
+  margin-top: 30px;
 }
 
 .inspiration-gallery figure {
@@ -600,7 +580,7 @@ p {
 
 .inspiration-gallery a {
   display: block;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 2;
   overflow: hidden;
   background: #d8ddd4;
 }
@@ -608,7 +588,9 @@ p {
 .inspiration-gallery img {
   width: 100%;
   height: 100%;
+  display: block;
   object-fit: cover;
+  object-position: center center;
   transition: transform 0.3s ease;
 }
 
@@ -977,6 +959,10 @@ p {
   .experience-tag {
     right: 20px;
   }
+
+  .inspiration-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 680px) {
@@ -1052,21 +1038,11 @@ p {
   }
 
   .inspiration-card {
-    grid-template-columns: 1fr;
-    min-height: 0;
     padding: 28px;
   }
 
-  .inspiration-card-wide {
-    padding: 28px;
-  }
-
-  .inspiration-card-header,
   .inspiration-gallery {
     grid-template-columns: 1fr;
-  }
-
-  .inspiration-gallery {
     gap: 16px;
   }
 
