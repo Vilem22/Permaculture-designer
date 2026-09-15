@@ -599,6 +599,17 @@ p {
   transform: scale(1.025);
 }
 
+/* Chinampas: schematic and model images should stay fully visible inside the same cards as the Hedgelaying gallery. */
+.chinampas-gallery .diagram-card a {
+  background: #f1eee5;
+}
+
+.chinampas-gallery .diagram-card img {
+  object-fit: contain;
+  object-position: center center;
+  padding: 6px;
+}
+
 .inspiration-gallery figcaption {
   padding: 12px 14px 14px;
   color: var(--muted);
